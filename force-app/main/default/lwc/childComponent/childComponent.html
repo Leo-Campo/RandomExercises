@@ -1,0 +1,11 @@
+<template>
+    <lightning-card  title={titleVariable}>
+        <lightning-button label="Change" slot="actions" onclick={changeTitle}></lightning-button>
+        <p class="slds-var-p-horizontal_small">
+            <template if:true={show}>
+                <lightning-input type="text" label="Enter some text"></lightning-input>
+            </template>    
+        </p>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+</template>

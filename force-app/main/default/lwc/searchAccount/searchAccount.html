@@ -1,0 +1,19 @@
+<template>
+    <lightning-card  title="Search for an Account">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" label="Enter an Account Name" placeholder="type here..." onchange={saveName}></lightning-input>
+            <lightning-button label="Search" onclick={displayResults}></lightning-button>
+            <template if:true={displayError}>
+                <div class="slds-var-m-vertical_medium">
+                    No Records Found.
+                </div>
+            </template>
+            <template if:true={displayRecord}>
+                <div class="slds-var-m-vertical_medium">
+                    Id : {accountToDisplay.Id}
+                    Name : {accountToDisplay.Name}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
